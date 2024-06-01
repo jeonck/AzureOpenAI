@@ -8,7 +8,7 @@ import streamlit as st
 dotenv.load_dotenv()
 
 # Setting up the deployment name
-deployment_name = os.environ['COMPLETIONS_MODEL']
+deployment_name = os.environ['CHAT_COMPLETIONS_MODEL']
 
 # The API key for your Azure OpenAI resource.
 api_key = os.environ["AZURE_OPENAI_API_KEY"]

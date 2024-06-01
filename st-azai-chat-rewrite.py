@@ -31,8 +31,8 @@ def get_summary():
         response = client.chat.completions.create(
             model=deployment_name,
             messages=[
-                {"role": "system", "content": "You are a helpful assistant that summarizes text with the form of ({keyword}): {content}"},
-                {"role": "user", "content": f"Summarize the following text: {st.session_state.user_input}"}
+                {"role": "system", "content": "You are a helpful assistant that rearrange sentences"},
+                {"role": "user", "content": f"Rearrange the following sentences: {st.session_state.user_input}"}
             ]
         )
 
@@ -71,10 +71,10 @@ if 'summary' not in st.session_state:
     st.session_state.summary = ""
 
 # Main layout
-st.title("Azure OpenAI Summarization App")
+st.title("Sentence Rearrangement App")
 
 # User input for text to summarize
-st.text_area("Enter text to summarize:", key='user_input', height=200, on_change=get_summary)
+st.text_area("Enter sentences to rearrange::", key='user_input', height=200, on_change=get_summary)
 
 # Display the summary
 if st.session_state.summary:
