@@ -16,7 +16,7 @@ api_key = os.environ["AZURE_OPENAI_API_KEY"]
 # The base URL for your Azure OpenAI resource. e.g. "https://<your resource name>.openai.azure.com"
 azure_endpoint = os.environ['AZURE_OPENAI_ENDPOINT']
 
-# Currently Chat Completion API have the following versions available: 2023-03-15-preview
+# Currently Chat Completion API have the following versions available: 2024-05-01-preview
 api_version = os.environ['OPENAI_API_VERSION']
 
 client = AzureOpenAI(
