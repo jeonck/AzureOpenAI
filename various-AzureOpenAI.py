@@ -1,3 +1,15 @@
+### 패키지 
+from langchain_community.document_loaders import TextLoader
+from langchain_openai import AzureOpenAIEmbeddings
+from langchain.text_splitter import CharacterTextSplitter
+from langchain_community.vectorstores import Chroma
+
+from openai import AzureOpenAI
+import dotenv
+import os
+
+dotenv.load_dotenv()
+
 ### .env 예시 
 AZURE_OPENAI_API_KEY="ㅇㅇㅇ"
 AZURE_OPENAI_ENDPOINT="https://ㅇㅇㅇ.openai.azure.com/"
